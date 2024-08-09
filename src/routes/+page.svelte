@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import welcome_fallback from "$lib/images/svelte-welcome.png";
 import welcome from "$lib/images/svelte-welcome.webp";
 import Counter from "./Counter.svelte";
@@ -25,6 +25,7 @@ import Counter from "./Counter.svelte";
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
+	<button>Load Counter</button>
 	<Counter />
 </section>
 

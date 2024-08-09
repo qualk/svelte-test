@@ -11,10 +11,10 @@ export default {
 		sourceMap: true,
 		postcss: {
 			plugins: [
-				postcssImport,
-				tailwindcss,
-				autoprefixer,
-				// ...(production ? [cssnano] : []),
+				postcssImport(),
+				tailwindcss(),
+				autoprefixer(),
+				// ...(production ? [cssnano()] : []),
 			],
 		},
 	}),
