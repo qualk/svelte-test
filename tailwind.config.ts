@@ -1,11 +1,18 @@
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
 
-const config: Config = {
+export default {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	safelist: ["dark"],
-	plugins: [require("@tailwindcss/typography")],
+	plugins: [
+		aspectRatio,
+		typography,
+		addVariablesForColors
+	],
 	theme: {
 		container: {
 			center: true,
@@ -60,6 +67,16 @@ const config: Config = {
 			},
 		},
 	},
-};
+} as Config;
 
-export default config;
+// biome-ignore lint/suspicious/noExplicitAny: Tailwind CSS Plugin
+function addVariablesForColors({ addBase, theme }: any ) {
+	const allColors = flattenColorPalette(theme('colors'));
+	const newVars = Object.fromEntries(
+		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+
+	addBase({
+		":root": newVars
+	});
+}
