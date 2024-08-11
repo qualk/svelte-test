@@ -13,6 +13,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"@fontsource/fira-mono": "^5.0.13",
+		"@fontsource/jetbrains-mono": "^5.0.20",
+		"@fontsource/nunito-sans": "^5.0.13",
 		"@neoconfetti/svelte": "^2.2.1",
 		"@sveltejs/kit": "^2.5.21",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
@@ -21,7 +23,6 @@
 		"@types/bun": "^1.1.6",
 		"@types/node": "^22.2.0",
 		"autoprefixer": "^10.4.20",
-		"cssnano": "^7.0.5",
 		"postcss": "^8.4.41",
 		"postcss-import": "^16.1.0",
 		"postcss-load-config": "^6.0.1",

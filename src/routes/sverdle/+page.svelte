@@ -5,7 +5,6 @@ import type { ActionData, PageData } from "./$types";
 import { reduced_motion } from "./reduced-motion";
 
 export let data: PageData;
-
 export let form: ActionData;
 
 /** Whether or not the user has won */
@@ -324,6 +323,7 @@ function keydown(event: KeyboardEvent) {
 		border-radius: 2px;
 		font-size: calc(var(--size) * 0.5);
 		margin: 0;
+		
 	}
 
 	.keyboard button.exact {

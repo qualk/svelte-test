@@ -5,6 +5,11 @@
 	import * as Avatar from "$lib/components/ui/avatar/index";
 </script>
 
+<svelte:head>
+	<link rel="preload" href="https://github.com/sveltejs.png" as="image">
+	<link rel="preload" href="https://raw.githubusercontent.com/huntabyte/shadcn-svelte/main/sites/docs/static/android-chrome-192x192.png" as="image">
+</svelte:head>
+
 <div class="app">
 	<Header></Header>
 

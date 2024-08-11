@@ -1,7 +1,7 @@
-<script lang="ts">
-import welcome_fallback from "$lib/images/svelte-welcome.png";
-import welcome from "$lib/images/svelte-welcome.webp";
-import Counter from "./Counter.svelte";
+<script>
+	import welcome_fallback from "$lib/images/svelte-welcome.png";
+	import welcome from "$lib/images/svelte-welcome.webp";
+	import Counter from "$lib/components/ui/counter/Counter.svelte";
 </script>
 
 <svelte:head>
@@ -18,14 +18,13 @@ import Counter from "./Counter.svelte";
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		to your new SvelteKit app
 	</h1>
 
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
-	<button>Load Counter</button>
 	<Counter />
 </section>
 
